@@ -139,7 +139,7 @@ export class TreeNode<T = {}> extends React.Component<ITreeNodeProps<T>> {
 
         return (
             <li className={classes}>
-                <div className={contentClasses} ref={this.handleContentRef} {...eventHandlers}>
+                <div className={contentClasses} data-node-id={this.props.id} ref={this.handleContentRef} {...eventHandlers}>
                     {this.maybeRenderCaret()}
                     <Icon className={Classes.TREE_NODE_ICON} icon={icon} />
                     <span className={Classes.TREE_NODE_LABEL}>{label}</span>
